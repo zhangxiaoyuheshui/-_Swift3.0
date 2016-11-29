@@ -14,7 +14,7 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         
         // 1.标题
-        title = "html"
+        title = "主页"
         
         // 2.button
         let button = UIButton(type: UIButtonType.custom)
@@ -42,7 +42,7 @@ class FirstViewController: UIViewController {
         
         second.sencodBlock {(result: String) ->() in
             
-            // 实现回调，显示扫描结果
+            //显示扫描结果
             let label = UILabel(frame: CGRect(x: 100, y: 200, width: 100, height: 50))
             label.center = CGPoint(x: (weakSelf?.view.frame.width)!/2, y: (weakSelf?.view.frame.height)!/2 + 100)
             label.text = result

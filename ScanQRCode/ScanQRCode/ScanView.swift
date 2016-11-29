@@ -198,6 +198,8 @@ class ScanView: UIView {
         })
         
     }
+    
+    /// 创建Timer
     func createTimer() {
         scanLineTimer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(moveUpAndDownLine), userInfo: nil, repeats: true)
     }
@@ -251,7 +253,6 @@ extension ScanView:AVCaptureMetadataOutputObjectsDelegate {
             scanLineTimer = nil
         }
         session.stopRunning()
-        
         // delegate
         delegate?.scanResult(result: readableCodeObject.stringValue)
         
